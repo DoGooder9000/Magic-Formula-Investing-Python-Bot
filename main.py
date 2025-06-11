@@ -56,7 +56,7 @@ if ans:
         GetInfo()
 '''
 #else:
-with open("stocks.txt") as file:
+with open("stocks.txt", 'r') as file:
     stocks = []
     for ticker in file.readlines():
         stocks.append(GetInfo(ticker.strip()))
@@ -65,3 +65,7 @@ with open("stocks.txt") as file:
 
     print("---------------------------")
     for stock in stocks: print(stock, end='')
+
+    with open("sorted.txt", 'w') as sorted_file:
+        for stock in stocks: 
+            sorted_file.write(f"{stock.name}\nEY: {stock.ey}\nROIC: {stock.roic}\n")
