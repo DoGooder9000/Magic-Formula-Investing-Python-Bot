@@ -68,4 +68,4 @@ with open("stocks.txt", 'r') as file:
 
     with open("sorted.txt", 'w') as sorted_file:
         for stock in stocks: 
-            sorted_file.write(f"{stock.name}\nEY: {stock.ey}\nROIC: {stock.roic}\n")
+            sorted_file.write(f"{stock.name}\nEY: {stock.ey}\nROIC: {stock.roic}\n\n")
